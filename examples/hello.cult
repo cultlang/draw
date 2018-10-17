@@ -1,0 +1,27 @@
+(load-dll "glfw")
+(load-dll "draw")
+(require "builtin:cult/glfw")
+(require "builtin:cult/draw")
+(glfw/init)
+
+(define win (glfw/window/create 640 480 "Whats up"))
+(glfw/window/context win)
+
+(define context (draw/Context))
+(define surface (draw/Surface context 640i32 480i32))
+(define canvas (draw/Canvas surface))
+(define color (draw/Color/from-rgb 255u8 0u8 0u8))
+
+
+(while (== false (glfw/window/shouldClose win))
+	(do
+		(draw/Canvas/clear canvas color)
+		(draw/Canvas/flush canvas)
+		(draw/Context/flush context)
+
+		(glfw/window/swap win)
+		(glfw/event/wait)
+	)
+)
+
+(glfw/terminate)
