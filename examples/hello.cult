@@ -1,5 +1,6 @@
 (load-dll "glfw")
 (load-dll "draw")
+(require "file:dlls.cult")
 (require "builtin:cult/glfw")
 (require "builtin:cult/draw")
 (glfw/init)

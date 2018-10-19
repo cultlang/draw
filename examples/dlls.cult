@@ -1,0 +1,2 @@
+(load-dll "glfw")
+(load-dll "draw")
