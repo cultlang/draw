@@ -15,7 +15,7 @@
 using namespace cultlang;
 using namespace cultlang::draw;
 
-CULTLANG_DRAW_EXPORTED extern craft::lisp::BuiltinModuleDescription DrawModule("cult/draw", &make_draw_bindings);
+CULTLANG_DRAW_EXPORTED extern craft::lisp::BuiltinModuleDescription DrawModule("extensions/draw", &make_draw_bindings);
 void cultlang::draw::make_draw_bindings(craft::types::instance<craft::lisp::Module> m)
 {
 	make_backing_bindings(m);

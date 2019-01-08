@@ -1,8 +1,5 @@
-(load-dll "glfw")
-(load-dll "draw")
-(require "file:dlls.cult")
-(require "builtin:cult/glfw")
-(require "builtin:cult/draw")
+(ns/import "builtin:extensions/glfw")
+(ns/import "builtin:extensions/draw")
 (glfw/init)
 
 (define win (glfw/window/create 640 480 "Whats up"))
